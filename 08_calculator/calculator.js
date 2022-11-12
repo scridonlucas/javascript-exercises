@@ -8,12 +8,14 @@ const subtract = function(a, b) {
 
 const sum = function(array) {
 	return array.reduce((total, element) => {
-    return total += element;
-  }, 0)
+    return total + element;
+  }, 0);
 };
 
-const multiply = function(a, b) {
-  return a * b;
+const multiply = function(array) {
+  return array.reduce((total, element) => {
+    return total * element;
+  }, 1);
 };
 
 const power = function(a, b) {
@@ -21,12 +23,13 @@ const power = function(a, b) {
 };
 
 const factorial = function(a) {
-  if (a == 0) return 1;
+  if (a === 0) return 1;
   let product  = 1;
 
 	for(let i = a; i > 0; i--) {
-    product *= a;
+    product *= i;
   }
+  return product;
 };
 
 // Do not edit below this line
